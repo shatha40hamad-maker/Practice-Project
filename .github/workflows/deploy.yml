@@ -1,4 +1,4 @@
-name: Deploy Vite app to GitHub Pages
+name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,9 +23,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-
-      - name: Install dependencies
-        run: npm install
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
