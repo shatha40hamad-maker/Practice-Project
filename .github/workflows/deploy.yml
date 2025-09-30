@@ -26,7 +26,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: your-subfolder
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
